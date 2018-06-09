@@ -1,0 +1,80 @@
+<!--<div class="modal-header">-->
+    <!--<h4 class="modal-title" (click)="saveArtist(getArtistName())"> {{getArtistName()}}</h4>-->
+    <!--<button aria-label="Close" data-dismiss="modal" class="close" type="button" (click)="activeModal.dismiss('closed')">-->
+        <!--<span aria-hidden="true">x</span>-->
+    <!--</button>-->
+<!--</div>-->
+<!--<div class="modal-body">-->
+    <!--<mat-table #table [dataSource]="dataSource">-->
+        <!--<ng-container matColumnDef="albumName">-->
+            <!--<th mat-header-cell *matHeaderCellDef> Album Name</th>-->
+            <!--<td mat-cell *matCellDef="let song"> {{song.album.name}}</td>-->
+        <!--</ng-container>-->
+        <!--<ng-container matColumnDef="songNum">-->
+            <!--<th mat-header-cell *matHeaderCellDef> #</th>-->
+            <!--<td mat-cell *matCellDef="let song"> {{song.num}}</td>-->
+        <!--</ng-container>-->
+
+        <!--<ng-container matColumnDef="songName">-->
+            <!--<th mat-header-cell *matHeaderCellDef> Song Name</th>-->
+            <!--<td mat-cell *matCellDef="let song"> {{song.name}}</td>-->
+        <!--</ng-container>-->
+
+        <!--<ng-container matColumnDef="songRate">-->
+            <!--<th mat-header-cell *matHeaderCellDef> Rate</th>-->
+            <!--<td mat-cell *matCellDef="let song"> {{song.rate}}</td>-->
+        <!--</ng-container>-->
+
+        <!--<ng-container matColumnDef="add">-->
+            <!--<th mat-header-cell *matHeaderCellDef> Add to DB</th>-->
+            <!--<td mat-cell *matCellDef="let song">-->
+                <!--<button (click)="addToDB(song)"> +</button>-->
+                <!--&lt;!&ndash; <button (click)="addToDB(song)" *ngIf="isInDB(song); else notInDB"> +  </button>-->
+                <!--<ng-template #notInDB>-->
+                <!--<button  (click)="deleteFromUserDB(song)" > -  </button>-->
+                <!--</ng-template> &ndash;&gt;-->
+            <!--</td>-->
+        <!--</ng-container>-->
+
+        <!--&lt;!&ndash;<tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>&ndash;&gt;-->
+        <!--&lt;!&ndash;<td mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></td>&ndash;&gt;-->
+    <!--</mat-table>p-->
+<!--</div>-->
+<!--</div>-->
+
+<div class="example-container mat-elevation-z8">
+
+    <mat-table #table [dataSource]="dataSource">
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+            <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="weight">
+            <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="symbol">
+            <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+</div>
+
+
+
+

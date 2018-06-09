@@ -1,0 +1,17 @@
+<!-- First Container -->
+<div id="container-search" class="container-fluid bg-1 text-center">
+  <!-- <div class="col-sm-12">
+    <button class="btn btn-how" type="button"> How does it work? </button>
+  </div> -->
+  <h3 class="margin headline">Enter Name:</h3>
+  <div class="input-group col-sm-3 center">
+    <input #artist type="text" class="form-control" id="search-form" placeholder="Search for..." (keyup.enter)="searchArtist(artist.value)">
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="button" (click)="searchArtist(artist.value)">
+        <span class="glyphicon glyphicon-search"></span> Search</button>
+    </span>
+
+  </div>
+</div>
+
+

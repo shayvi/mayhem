@@ -1,0 +1,29 @@
+/***************/
+.bg-1 {
+
+    background-image: url("../../../content/images/the_amity_affliction.jpg");
+     background-size:     cover;
+     background-repeat:   no-repeat;
+     background-position: center center;
+     color: #ffffff;
+     /*height:100vh;*/
+
+ }
+
+
+   #container-search{
+   padding-top: 0px;
+   padding-left:0px;
+   padding-right:0px;
+   padding-bottom: 20%;
+   }
+
+
+ .btn-how{
+   background-color:red;
+   position:absolute;
+   left:0px;
+   top:0px;
+ }
+
+
